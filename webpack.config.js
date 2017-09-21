@@ -7,6 +7,7 @@ const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
 const css = require('./webpack/css');
 const extractCss = require('./webpack/css.extract');
+const uglifyJs = require('./webpack/js.uglify');
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
@@ -50,7 +51,8 @@ module.exports = function(env) {
 	if(env === 'prod') {
 		return merge([
 			common,
-			extractCss()
+			extractCss(),
+			uglifyJs()
 		]);
 	}
 	if (env === 'dev') {
