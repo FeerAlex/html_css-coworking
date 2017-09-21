@@ -1,10 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpacPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
 const css = require('./webpack/css');
+const extractCss = require('./webpack/css.extract');
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
@@ -19,18 +21,25 @@ const common = merge(
 		},
 		output: {
 			path: PATHS.build,
-			filename: '[name].js'
+			filename: 'js/[name].js'
 		},
 		plugins: [
 			new HtmlWebpacPlugin({
 				filename: 'index.html',
-				chunks: ['index'],
+				chunks: ['index', 'common'],
 				template: PATHS.source + '/pages/index/index.pug',
 			}),
 			new HtmlWebpacPlugin({
 				filename: 'blog.html',
-				chunks: ['blog'],
+				chunks: ['blog', 'common'],
 				template: PATHS.source + '/pages/blog/blog.pug',
+			}),
+			new webpack.optimize.CommonsChunkPlugin({
+				name: 'common'
+			}),
+			new webpack.ProvidePlugin({
+				$: 'jquery',
+				jQuery: 'jquery'
 			})
 		]
 	},
@@ -39,7 +48,10 @@ const common = merge(
 
 module.exports = function(env) {
 	if(env === 'prod') {
-		return common;
+		return merge([
+			common,
+			extractCss()
+		]);
 	}
 	if (env === 'dev') {
 		return merge([
@@ -47,6 +59,6 @@ module.exports = function(env) {
 			devserver(),
 			sass(),
 			css()
-		])
+		]);
 	}
 };

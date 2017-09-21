@@ -1,5 +1,5 @@
-import './blog.scss';
 import 'normalize.css';
+import './blog.scss';
 
 import createMenu from '../../components/menu/menu';
 var menu = createMenu(['Главная', 'Обо мне', 'Портфолио'], 'menu');
