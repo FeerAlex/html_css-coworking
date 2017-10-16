@@ -1,0 +1,258 @@
+.main {
+  margin-bottom: 70px; }
+
+.comments {
+  margin-bottom: 17px; }
+
+.comments__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0; }
+
+.comments__item {
+  border-bottom: 2px solid #f5f5f5;
+  padding-bottom: 22px;
+  margin-bottom: 30px; }
+  .comments__item:last-child {
+    border-bottom: none;
+    margin-bottom: 0; }
+
+.comments__avatar {
+  float: left; }
+
+.avatar {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  overflow: hidden; }
+
+.comments__desc {
+  float: right;
+  width: 700px;
+  font-family: 'GothaProLig';
+  font-size: 18px;
+  color: #221f1f; }
+
+.comments__date {
+  display: block;
+  font-size: 14px;
+  color: #656464;
+  line-height: 10px;
+  margin-bottom: 10px; }
+
+.comments__author {
+  font-family: 'GothaProBol';
+  margin: 0 0 10px 0; }
+
+.comments__text {
+  margin: 0;
+  line-height: 30px; }
+
+.pagination {
+  margin-bottom: 70px;
+  margin-left: 211px;
+  font-size: 0; }
+
+.pagination__title {
+  font-family: 'GothaProLig';
+  font-size: 14px;
+  color: #656464;
+  display: inline-block;
+  vertical-align: middle; }
+
+.pagination__flickr {
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle; }
+
+.pagination__btn {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 10px;
+  text-decoration: none;
+  color: #221f1f;
+  transition: color .3s ease-in-out; }
+  .pagination__btn:hover {
+    color: #ec1e79; }
+  .pagination__btn_active {
+    color: #bdbcbc !important;
+    cursor: default; }
+
+.pagination__list {
+  margin: 0;
+  padding: 0 3px;
+  list-style: none;
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle; }
+
+.pagination__item {
+  display: inline-block; }
+
+.pagination__link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  font-family: 'GothaProBol';
+  color: #221f1f;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 3px;
+  transition: all .3s ease-in-out; }
+  .pagination__link:hover {
+    background: #27273e;
+    color: #ec1e79; }
+  .pagination__link_active {
+    color: #ec1e79;
+    cursor: default;
+    background: transparent !important; }
+
+.form {
+  width: 560px;
+  padding: 40px 70px 50px 70px;
+  background: #f5f5f5;
+  font-family: 'GothaProLig';
+  font-size: 14px;
+  color: #221f1f;
+  border-radius: 2px;
+  overflow: hidden; }
+
+.form__title {
+  font-family: "GothaProBol";
+  font-size: 49px;
+  letter-spacing: -0.36px;
+  margin: 0 0 16px 0; }
+
+.form__inputs {
+  margin-bottom: 15px; }
+
+.form__row {
+  margin-bottom: 18px; }
+  .form__row:last-child {
+    margin-bottom: 0; }
+
+.form__elem_left {
+  float: left; }
+
+.form__elem_right {
+  float: right; }
+
+.form__elem-title {
+  display: block;
+  margin-bottom: 9px; }
+
+.form__input {
+  border-width: 0;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  transition: border-color .3s ease-in-out; }
+  .form__input:focus {
+    border-color: #ec1e79;
+    outline: none; }
+  .form__input::-webkit-input-placeholder {
+    opacity: .5; }
+  .form__input:-moz-placeholder {
+    opacity: .5; }
+  .form__input::-moz-placeholder {
+    opacity: .5; }
+  .form__input:-ms-input-placeholder {
+    opacity: .5; }
+
+.form__input_small {
+  width: 270px;
+  height: 45px;
+  padding: 0px 10px;
+  letter-spacing: 1px; }
+
+.form__input_big {
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  letter-spacing: 0.8px;
+  height: 90px;
+  resize: none; }
+
+.form__radios {
+  float: left; }
+
+.form__radios-title {
+  margin-bottom: 9px;
+  line-height: 12px; }
+
+.radio__label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin-left: 17px; }
+  .radio__label:first-child {
+    margin: 0; }
+
+.radio__label-circle {
+  background-image: -moz-linear-gradient(90deg, #ededed 0%, white 100%);
+  background-image: -webkit-linear-gradient(90deg, #ededed 0%, white 100%);
+  background-image: -ms-linear-gradient(90deg, #ededed 0%, white 100%);
+  border: 1px solid #c9c9c9;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transition: border-color .3s ease-in-out; }
+  .radio__label-circle:after {
+    content: "";
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #ec1e79;
+    transition: all .3s ease-in-out; }
+
+.radio__label-elem {
+  position: absolute;
+  top: 0;
+  left: -9999px; }
+  .radio__label-elem:checked + .radio__label-circle {
+    border-color: #ec1e79; }
+    .radio__label-elem:checked + .radio__label-circle:after {
+      width: 8px;
+      height: 8px; }
+    .radio__label-elem:checked + .radio__label-circle + .radio__label-name {
+      color: #ec1e79; }
+
+.radio__label-name {
+  display: inline-block;
+  vertical-align: middle;
+  transition: color .3s ease-in-out; }
+
+.form__controls {
+  float: right; }
+
+.form__submit {
+  width: 139px;
+  height: 45px;
+  border-width: 0;
+  background: #27273e;
+  font-family: "GothaProBol";
+  font-size: 12px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: 0;
+  letter-spacing: 2.3px;
+  transition: background .3s ease-in-out; }
+  .form__submit:hover {
+    background: #ec1e79; }

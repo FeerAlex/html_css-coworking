@@ -1,0 +1,70 @@
+.main {
+  margin-bottom: 34px;
+}
+.tariffs__list {
+  padding: 0;
+  margin-left: -55px;
+  font-size: 0;
+}
+.tariffs__item {
+  width: 250px;
+  font-family: "GothaProBol";
+  text-align: center;
+  margin: 0 0 39px 55px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+
+  &:hover .tariffs__preview-img {
+    transform: scale(1.2);
+  }
+}
+.tariffs__preview {
+  margin: 0 auto;
+  position: relative;
+  font-size: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 153px;
+  margin-bottom: 23px;
+}
+.tariffs__preview-img {
+  width: 100%;
+  transition: all .5s ease-out;
+}
+.tariffs__preview-shadow {
+  background-color: rgba(39, 39, 62, 0.85);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.tariffs__preview-text {
+  width: 80%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #5dd1f8;
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.tariffs__vip {
+  color: #ec1e79;
+  display: block;
+}
+.tariffs__desc {
+  line-height: 21px;
+}
+.tariffs__desc-title {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+.tariffs__desc-text {
+  font-family: "GothaProLig";
+  font-size: 14px;
+  margin: 0;
+}

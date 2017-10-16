@@ -1,0 +1,165 @@
+.main {
+  margin-bottom: 47px; }
+
+.preview {
+  margin-top: -46px;
+  margin-bottom: 23px; }
+
+.preview__block {
+  width: 880px;
+  height: 355px;
+  overflow: hidden;
+  position: relative; }
+
+.preview__block-img {
+  width: 100%;
+  height: auto; }
+
+.preview__block-text {
+  display: block;
+  font-family: 'GothaProBol';
+  font-size: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 66px;
+  letter-spacing: -0.4px; }
+
+.about-company {
+  font-family: 'GothaProLig';
+  font-size: 18px;
+  color: #221f1f;
+  line-height: 30px;
+  max-width: 700px; }
+
+.about-company__intro {
+  margin: 0 0 10px 0; }
+
+.about-company__offers {
+  margin-bottom: 5px; }
+
+.offers__title {
+  font-family: 'GothaProBol';
+  font-size: 18px;
+  margin: 0 0 7px 0; }
+
+.offers__list {
+  list-style: none;
+  padding-left: 18px;
+  margin: 0; }
+
+.offers__item {
+  position: relative;
+  padding-left: 23px;
+  margin-bottom: 5px;
+  text-indent: -5px; }
+  .offers__item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 5px;
+    height: 5px;
+    background: #ec1e79;
+    border-radius: 50%; }
+
+.about-company__outro {
+  margin: 0 0 21px 0; }
+
+.about-company__discount {
+  margin: 0 0 65px 0;
+  padding: 0;
+  background: #27273e;
+  color: #fff;
+  padding: 12px 30px; }
+
+.discount__val {
+  font-family: 'GothaProBol';
+  color: #ec1e79; }
+
+.partners__title {
+  font-size: 49px;
+  font-family: 'GothaProBol';
+  text-transform: uppercase;
+  margin: 0 0 50px 0;
+  line-height: 38px; }
+
+.partners__list {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  height: 200px; }
+
+.partners__item {
+  display: inline-block;
+  list-style: none;
+  opacity: .5;
+  vertical-align: middle;
+  margin-bottom: 51px;
+  width: 33.3%; }
+
+.partners__logo {
+  background: url(../images/partners.png) center no-repeat;
+  cursor: pointer;
+  position: relative; }
+  .partners__logo:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/partners.png) center no-repeat;
+    transition: opacity .3s ease-in-out; }
+  .partners__logo:hover:after {
+    opacity: 0; }
+
+.partners__logo_winter {
+  width: 160px;
+  height: 41px;
+  background-position: -5px -56px; }
+  .partners__logo_winter:after {
+    background-position: -5px -5px; }
+
+.partners__logo_drop {
+  width: 123px;
+  height: 62px;
+  background-position: -175px -77px;
+  margin: 0 auto; }
+  .partners__logo_drop:after {
+    background-position: -175px -5px; }
+
+.partners__logo_achmatova {
+  width: 130px;
+  height: 62px;
+  background-position: -5px -149px;
+  float: right;
+  margin-right: 14px; }
+  .partners__logo_achmatova:after {
+    background-position: -5px -149px; }
+
+.partners__logo_tishkin {
+  width: 160px;
+  height: 62px;
+  background-position: -5px -221px; }
+  .partners__logo_tishkin:after {
+    background-position: -145px -149px; }
+
+.partners__logo_puphok {
+  width: 137px;
+  height: 62px;
+  background-position: -308px -5px;
+  margin: 0 auto; }
+  .partners__logo_puphok:after {
+    background-position: -175px -221px; }
+
+.partners__logo_avantazh {
+  width: 51px;
+  height: 62px;
+  background-position: -369px -77px;
+  float: right;
+  margin-right: 53px; }
+  .partners__logo_avantazh:after {
+    background-position: -308px -77px; }

@@ -1,0 +1,84 @@
+.footer {
+  background: #27273e;
+  color: $white;
+  padding: 12px 0;
+  font-size: 0;
+  margin-top: -78px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.footer__col {
+  width: 33.3%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.copy {
+  width: 270px;
+  display: inline-block;
+  font-family: "GothaProLig";
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+}
+.copy-website {
+  font-family: "GothaProBol";
+  color: #fff;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $pink;
+  }
+}
+.copy-name {
+  font-family: "GothaProBol";
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $pink;
+  }
+}
+.footer__logo {
+  text-align: center;
+}
+.footer__socials {
+  text-align: right;
+}
+.socials {
+  text-align: left;
+  display: inline-block;
+  letter-spacing: -0.1px;
+}
+.socials__title {
+  font-family: "GothaProBol";
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.socials__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.socials__item {
+  display: inline-block;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.socials__link {
+  text-decoration: none;
+  color: #d4d4d8;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: $pink;
+  }
+}
+.socials .icon {
+  font-size: 20px;
+  line-height: 20px;
+}

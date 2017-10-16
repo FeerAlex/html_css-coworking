@@ -1,2 +1,79 @@
-h1 {
-  color: green; }
+.intro {
+  background: url(../images/index.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative; }
+
+.intro__shadow {
+  position: absolute;
+  background: #ec1e79;
+  opacity: .15;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
+
+.intro__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-block;
+  font-family: 'GothaProBol';
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.5);
+  animation: visible 1s ease .5s;
+  animation-fill-mode: forwards; }
+  .intro__content .logo__img {
+    width: 160px;
+    margin-bottom: 10px; }
+
+@keyframes visible {
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); } }
+
+.intro__logo {
+  margin-bottom: 30px; }
+
+.logo__title {
+  font-size: 20px;
+  letter-spacing: 2.9px; }
+
+.intro__link {
+  display: block;
+  line-height: 38px;
+  width: 176px;
+  height: 38px;
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border: 3px solid #ec1e79;
+  color: #ec1e79;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color .3s ease-in-out; }
+  .intro__link:before, .intro__link:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: #ec1e79;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transition: all .3s ease-in-out; }
+  .intro__link:before {
+    left: 50%; }
+  .intro__link:after {
+    right: 50%; }
+  .intro__link:hover {
+    color: #fff; }
+    .intro__link:hover:before, .intro__link:hover:after {
+      width: 50%;
+      opacity: 1; }

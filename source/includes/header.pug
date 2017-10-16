@@ -1,0 +1,13 @@
+.header
+  .container.clearfix
+    .header__logo.logo
+      a(href="/home.html").logo__link
+        img.logo__img(src=require("../images/logo.svg") alt="coworking")
+    .header__contact.contact
+      a.contact__phone(href="tel:+78000039210") 8 (800) 00-392-10
+      .schedule.clearfix
+        span.schedule__head График работы
+          .shedule__qtip
+            ul.schedule__list
+              li.schedule__item пн-вс: 09:00-20:00
+              li.schedule__item.schedule__item_default обед: 14:00-14:30

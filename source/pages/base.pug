@@ -1,9 +1,17 @@
 doctype html
-html
+html(lang="ru-RU")
 	head
 		meta(charset = 'utf-8')
+		meta(http-equiv="x-ua-compatible" content="ie=edge")
 		meta(name='viewport', content='initial-scale=1.0, width=device-width')
 		title
 			block title
 	body
-		block main
+		.wrapper
+			include ../includes/header.pug
+			.main
+				.container.clearfix
+					include ../includes/nav.pug
+					.content
+						block main
+		include ../includes/footer.pug

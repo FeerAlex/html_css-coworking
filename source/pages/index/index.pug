@@ -1,6 +1,14 @@
-extends ../base
-block title
-	| Index page
-block main
-	h1 page index-pug
-	img(src=require('./logo.svg') width="100")
+doctype html
+html
+	head
+		meta(charset = 'utf-8')
+		meta(name='viewport', content='initial-scale=1.0, width=device-width')
+		title Добро пожаловать
+	body
+		.intro
+			.intro__shadow
+			.intro__content
+				.intro__logo.logo
+					img(src=require("../../images/logo.svg") alt="воркадиум").logo__img
+					.logo__title воркадиум
+				a(href="/home.html").intro__link перейти на сайт

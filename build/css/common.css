@@ -445,9 +445,369 @@ template {
 [hidden] {
   display: none;
 }
-ul {
-  border: 1px solid #777; }
-  ul li {
-    display: inline-block;
-    padding: 5px 10px;
-    background: #bbb; }
+@font-face {
+  font-family: 'GothaProBol';
+  src: url(../fonts/gothaprobol.eot);
+  src: url(../fonts/gothaprobol.eot#iefix) format("embedded-opentype"), url(../fonts/gothaprobol.woff) format("woff"), url(../fonts/gothaprobol.ttf) format("truetype"), url(../images/gothaprobol.svg#coworking) format("svg"); }
+
+@font-face {
+  font-family: 'GothaProLig';
+  src: url(../fonts/gothaprolig.eot);
+  src: url(../fonts/gothaprolig.eot#iefix) format("embedded-opentype"), url(../fonts/gothaprolig.woff) format("woff"), url(../fonts/gothaprolig.ttf) format("truetype"), url(../images/gothaprolig.svg#coworking) format("svg"); }
+
+@font-face {
+  font-family: 'GothaProLigIta';
+  src: url(../fonts/gothaproligita.eot);
+  src: url(../fonts/gothaproligita.eot#iefix) format("embedded-opentype"), url(../fonts/gothaproligita.woff) format("woff"), url(../fonts/gothaproligita.ttf) format("truetype"), url(../images/gothaproligita.svg#coworking) format("svg"); }
+
+@font-face {
+  font-family: 'coworking';
+  src: url(../fonts/coworking.eot);
+  src: url(../fonts/coworking.eot#iefix) format("embedded-opentype"), url(../fonts/coworking.woff) format("woff"), url(../fonts/coworking.ttf) format("truetype"), url(../images/coworking.svg#coworking) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body {
+  height: 100%; }
+
+body {
+  color: #221f1f;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.wrapper {
+  min-height: 100%;
+  min-width: 1080px;
+  position: relative;
+  overflow: hidden; }
+
+.wrapper:after {
+  content: "";
+  display: block;
+  height: 78px; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.container {
+  width: 1060px;
+  margin: 0 auto; }
+
+.icon {
+  font-family: "coworking";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  font-variant: normal;
+  text-transform: none; }
+
+.content {
+  width: 880px;
+  float: right;
+  transform: translate(300px, 0);
+  opacity: 0;
+  animation: contentLeft 1s ease;
+  animation-fill-mode: forwards; }
+
+@keyframes contentLeft {
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; } }
+
+.breadcrumbs {
+  margin-bottom: 19px;
+  font-family: 'GothaProLigIta';
+  color: #221f1f; }
+
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+  line-height: 10px; }
+
+.breadcrumbs__item {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -0.3px; }
+  .breadcrumbs__item:after {
+    content: "/"; }
+  .breadcrumbs__item:last-child:after {
+    display: none; }
+
+.breadcrumbs__link {
+  color: #ec1e79;
+  padding-right: 5px;
+  position: relative;
+  text-decoration: none; }
+  .breadcrumbs__link:before {
+    content: "";
+    width: 93%;
+    height: 1px;
+    background: #ec1e79;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.3;
+    transition: opacity .3s ease-in-out; }
+  .breadcrumbs__link:hover:before {
+    opacity: 0; }
+
+.breadcrumbs__link_active {
+  color: #221f1f; }
+  .breadcrumbs__link_active:before {
+    content: none; }
+
+.content__title {
+  font-family: "GothaProBol";
+  font-size: 49px;
+  margin: 0 0 41px 0;
+  letter-spacing: -1.6px; }
+
+.header {
+  background: #27273e;
+  padding: 12px 0;
+  color: #fff;
+  font-size: 0;
+  margin-bottom: 46px; }
+
+.header__logo {
+  float: left; }
+
+.header__contact {
+  float: right; }
+
+.contact {
+  font-family: 'GothaProBol'; }
+
+.contact__phone {
+  color: #fff;
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 32px;
+  letter-spacing: -0.1px;
+  display: inline-block;
+  position: relative;
+  transition: all .3s ease-in-out; }
+  .contact__phone:hover {
+    color: #5dd1f8; }
+    .contact__phone:hover:before {
+      opacity: 1;
+      left: -20px; }
+  .contact__phone:before {
+    content: '\E80A';
+    font-family: "coworking";
+    position: absolute;
+    left: -5px;
+    top: 1px;
+    font-size: 12px;
+    opacity: 0;
+    transition: left .3s ease-in-out, opacity .3s ease-in-out; }
+
+.schedule {
+  position: relative; }
+
+.schedule__head {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: right;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ec1e79;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  transition: color .3s ease-in-out; }
+  .schedule__head:hover {
+    color: #5dd1f8; }
+    .schedule__head:hover .shedule__qtip {
+      right: 0;
+      opacity: 1; }
+    .schedule__head:hover .schedule__list:after {
+      top: -7px; }
+
+.shedule__qtip {
+  font-family: 'GothaProBol';
+  font-size: 14px;
+  text-align: left;
+  position: absolute;
+  right: -9999px;
+  top: 37px;
+  z-index: 10;
+  opacity: 0;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 0px rgba(23, 59, 117, 0.55);
+  transition: opacity .3s ease-in-out, right .0s ease-in-out; }
+  .shedule__qtip:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: -35%;
+    left: 0;
+    width: 100%; }
+
+.schedule__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  display: inline-block;
+  padding: 15px 10px 10px 10px;
+  border-radius: 3px;
+  position: relative; }
+  .schedule__list:after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    display: block;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    z-index: -1;
+    box-shadow: 0px 0px 10px 0px rgba(23, 59, 117, 0.55);
+    transition: top .3s ease-in-out; }
+
+.schedule__item {
+  font-size: 14px;
+  color: #ec1e79;
+  padding-bottom: 5px;
+  line-height: 17px; }
+
+.schedule__item_default {
+  font-family: 'GothaProLig';
+  font-weight: normal;
+  color: #221f1f; }
+
+.nav {
+  background: #fff;
+  width: 160px;
+  float: left;
+  opacity: 0;
+  transform: translate(-300px, 0);
+  animation: navRight 1s ease;
+  animation-fill-mode: forwards; }
+
+@keyframes navRight {
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; } }
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0; }
+
+.nav__item {
+  margin-bottom: 27px; }
+  .nav__item .icon {
+    width: 19px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    vertical-align: middle; }
+
+.nav__item_active .nav__link {
+  color: #221f1f; }
+
+.nav__link {
+  font-family: 'GothaProBol';
+  text-decoration: none;
+  color: #ec1e79;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color .3s ease-in-out; }
+  .nav__link:hover {
+    color: #221f1f; }
+  .nav__link_active {
+    color: #221f1f; }
+
+.nav__title {
+  margin-left: 18px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.footer {
+  background: #27273e;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 0;
+  margin-top: -78px;
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.footer__col {
+  width: 33.3%;
+  display: inline-block;
+  vertical-align: middle; }
+
+.copy {
+  width: 270px;
+  display: inline-block;
+  font-family: "GothaProLig";
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0; }
+
+.copy-website {
+  font-family: "GothaProBol";
+  color: #fff;
+  transition: color .3s ease-in-out; }
+  .copy-website:hover {
+    color: #ec1e79; }
+
+.copy-name {
+  font-family: "GothaProBol";
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s ease-in-out; }
+  .copy-name:hover {
+    color: #ec1e79; }
+
+.footer__logo {
+  text-align: center; }
+
+.footer__socials {
+  text-align: right; }
+
+.socials {
+  text-align: left;
+  display: inline-block;
+  letter-spacing: -0.1px; }
+
+.socials__title {
+  font-family: "GothaProBol";
+  font-size: 14px;
+  margin-bottom: 8px; }
+
+.socials__list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.socials__item {
+  display: inline-block;
+  margin-left: 10px; }
+  .socials__item:first-child {
+    margin-left: 0; }
+
+.socials__link {
+  text-decoration: none;
+  color: #d4d4d8;
+  transition: all .2s ease-in-out; }
+  .socials__link:hover {
+    color: #ec1e79; }
+
+.socials .icon {
+  font-size: 20px;
+  line-height: 20px; }

@@ -1,0 +1,59 @@
+.nav {
+  background: #fff;
+  width: 160px;
+  float: left;
+  opacity: 0;
+  transform: translate(-300px, 0);
+  animation: navRight 1s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes navRight {
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+.nav__item {
+  margin-bottom: 27px;
+
+  .icon {
+    width: 19px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    vertical-align: middle;
+  }
+}
+.nav__item_active {
+  .nav__link {
+    color: $dark;
+  }
+}
+.nav__link {
+  font-family: 'GothaProBol';
+  text-decoration: none;
+  color: $pink;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $dark;
+  }
+
+  &_active {
+    color: $dark;
+  }
+}
+.nav__title {
+  margin-left: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}

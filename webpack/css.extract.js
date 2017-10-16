@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = function(paths) {
 	return {
@@ -10,7 +11,20 @@ module.exports = function(paths) {
 					use: ExtractTextPlugin.extract({
 						publicPath: '../',
 						fallback: 'style-loader',
-						use: ['css-loader','sass-loader']
+						use: [
+							{
+								loader: 'css-loaderz',
+								options: {
+									// minimize: true || {/* CSSNano Options */},
+									plugins: [
+										autoprefixer({
+											browsers: ['IE 10', 'IE 11', 'last 2 version']
+										})
+									]
+								}
+							},
+							'sass-loader'
+						]
 					})
 				},
 				{

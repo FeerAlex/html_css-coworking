@@ -1,0 +1,154 @@
+$darkblue: #27273e;
+$dark: #221f1f;
+$pink: #ec1e79;
+$white: #fff;
+
+@font-face {
+  font-family: 'GothaProBol';
+  src: url('../fonts/gothapro/gothaprobol.eot');
+  src: url('../fonts/gothapro/gothaprobol.eot#iefix') format('embedded-opentype'),
+       url('../fonts/gothapro/gothaprobol.woff') format('woff'),
+       url('../fonts/gothapro/gothaprobol.ttf') format('truetype'),
+       url('../fonts/gothapro/gothaprobol.svg#coworking') format('svg');
+}
+@font-face {
+  font-family: 'GothaProLig';
+  src: url('../fonts/gothapro/gothaprolig.eot');
+  src: url('../fonts/gothapro/gothaprolig.eot#iefix') format('embedded-opentype'),
+       url('../fonts/gothapro/gothaprolig.woff') format('woff'),
+       url('../fonts/gothapro/gothaprolig.ttf') format('truetype'),
+       url('../fonts/gothapro/gothaprolig.svg#coworking') format('svg');
+}
+@font-face {
+  font-family: 'GothaProLigIta';
+  src: url('../fonts/gothapro/gothaproligita.eot');
+  src: url('../fonts/gothapro/gothaproligita.eot#iefix') format('embedded-opentype'),
+       url('../fonts/gothapro/gothaproligita.woff') format('woff'),
+       url('../fonts/gothapro/gothaproligita.ttf') format('truetype'),
+       url('../fonts/gothapro/gothaproligita.svg#coworking') format('svg');
+}
+@font-face {
+  font-family: 'coworking';
+  src: url('../fonts/coworking/coworking.eot');
+  src: url('../fonts/coworking/coworking.eot#iefix') format('embedded-opentype'),
+       url('../fonts/coworking/coworking.woff') format('woff'),
+       url('../fonts/coworking/coworking.ttf') format('truetype'),
+       url('../fonts/coworking/coworking.svg#coworking') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  color: $dark;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wrapper {
+  min-height: 100%;
+  min-width: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+.wrapper:after {
+  content: "";
+  display: block;
+  height: 78px;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+  width: 1060px;
+  margin: 0 auto;
+}
+.icon {
+  font-family: "coworking";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+
+  font-variant: normal;
+  text-transform: none;
+}
+.content {
+  width: 880px;
+  float: right;
+  transform: translate(300px, 0);
+  opacity: 0;
+  animation: contentLeft 1s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes contentLeft {
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 19px;
+  font-family: 'GothaProLigIta';
+  color: #221f1f;
+}
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+}
+.breadcrumbs__item {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+
+  &:after {
+    content: "/"
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+.breadcrumbs__link {
+  color: #ec1e79;
+  padding-right: 5px;
+  position: relative;
+  text-decoration: none;
+
+  &:before {
+	content: "";
+	width: 93%;
+	height: 1px;
+	background: #ec1e79;
+	position: absolute;
+	bottom: 0;
+	opacity: 0.3;
+	transition: opacity .3s ease-in-out;
+  }
+  &:hover:before {
+    opacity: 0;
+  }
+}
+.breadcrumbs__link_active {
+  color: #221f1f;
+
+  &:before {
+  	content: none
+  }
+}
+.content__title {
+  font-family: "GothaProBol";
+  font-size: 49px;
+  margin: 0 0 41px 0;
+  letter-spacing: -1.6px;
+}
+
+@import "../includes/header.scss";
+@import "../includes/nav.scss";
+@import "../includes/footer.scss";

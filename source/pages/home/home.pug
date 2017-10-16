@@ -1,0 +1,40 @@
+extends ../base
+block title
+	| Главная
+block main
+	.preview
+		.preview__block
+			img.preview__block-img(src=require("../../images/preview.jpg") alt="")
+			span.preview__block-text О компании
+	.about-company
+		p.about-company__intro Чтобы работать в дружелюбной и уютной атмосфере, не обязательно снимать офис за баснословные суммы. Обратитесь в наш коворкинг «Воркадиум» и оцените преимущества сотрудничества.
+		.about-company__offers
+			.offers
+				h6.offers__title Что мы предлагаем:
+				ul.offers__list
+					li.offers__item Огромный конференц-зал на 120 человек для проведения массовых переговоров, праздников, совещаний.
+					li.offers__item Средний конференц-зал на 40 человек.
+					li.offers__item Уютный зал с круглым столом для совещаний на 12 человек.
+					li.offers__item Пространство для совместной работы. Несколько вариантов – от уютных небольших кабинетов с панорамными окнами и стильных офисов на несколько человек до творческих комнат в стиле лофт с высокими потолками, без привычных атрибутов офиса.
+					li.offers__item Большая библиотека с классической и специальной литературой.
+					li.offers__item Магазин канцелярии.
+					li.offers__item Компьютерный зал.
+					li.offers__item Зал для неформальных встреч с баром и кальяном.
+		p.about-company__outro Возможность комфортно работать и с удобством организовывать бизнес встречи – это базовая потребность современного делового человека. В уютных залах «Воркадиум» есть все, что нужно для ведения дел – переговорные столы, тумбы и шкафы для хранения документов, компьютерная техника, а также уютный ресторан для дружеских встреч.
+		p.about-company__discount Для наших новых клиентов мы предлагаем <span class="discount__val">скидку 50%</span> на первый день! Приходите, чтобы лично оценить преимущества коворкинга «Воркадиум»!
+		.about-company__partners
+			.partners
+				h5.partners__title Партнёры
+				ul.partners__list
+					li.partners__item
+						.partners__logo.partners__logo_winter
+					li.partners__item
+						.partners__logo.partners__logo_drop
+					li.partners__item
+						.partners__logo.partners__logo_achmatova
+					li.partners__item
+						.partners__logo.partners__logo_tishkin
+					li.partners__item
+						.partners__logo.partners__logo_puphok
+					li.partners__item
+						.partners__logo.partners__logo_avantazh

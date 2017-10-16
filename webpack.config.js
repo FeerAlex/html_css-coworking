@@ -9,6 +9,7 @@ const css = require('./webpack/css');
 const extractCss = require('./webpack/css.extract');
 const uglifyJs = require('./webpack/js.uglify');
 const images = require('./webpack/images');
+const fonts = require('./webpack/fonts');
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
@@ -19,7 +20,9 @@ const common = merge(
 	{
 		entry: {
 			'index': PATHS.source + '/pages/index/index.js',
-			'blog': PATHS.source + '/pages/blog/blog.js'
+			'home': PATHS.source + '/pages/home/home.js',
+			'tariffs': PATHS.source + '/pages/tariffs/tariffs.js',
+			'comments': PATHS.source + '/pages/comments/comments.js'
 		},
 		output: {
 			path: PATHS.build,
@@ -32,9 +35,19 @@ const common = merge(
 				template: PATHS.source + '/pages/index/index.pug',
 			}),
 			new HtmlWebpacPlugin({
-				filename: 'blog.html',
-				chunks: ['blog', 'common'],
-				template: PATHS.source + '/pages/blog/blog.pug',
+				filename: 'tariffs.html',
+				chunks: ['tariffs', 'common'],
+				template: PATHS.source + '/pages/tariffs/tariffs.pug',
+			}),
+			new HtmlWebpacPlugin({
+				filename: 'comments.html',
+				chunks: ['comments', 'common'],
+				template: PATHS.source + '/pages/comments/comments.pug',
+			}),
+			new HtmlWebpacPlugin({
+				filename: 'home.html',
+				chunks: ['home', 'common'],
+				template: PATHS.source + '/pages/home/home.pug',
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'
@@ -46,7 +59,8 @@ const common = merge(
 		]
 	},
 	pug(),
-	images()
+	images(),
+	fonts()
 );
 
 module.exports = function(env) {

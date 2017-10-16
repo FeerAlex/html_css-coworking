@@ -1,0 +1,7 @@
+.nav
+  ul.nav__list
+    each val, index in [{text:'Главная',href:'/home.html',code:'&#xe808;',mod:'icon-main'},{text:'Тарифы',href:'/tariffs.html',code:'&#xe809;',mod:'icon-wallet'},{text:'Отзывы',href:'/comments.html',code:'&#xe800;',mod:'icon-feed'}]
+      li.nav__item
+        a(href=val.href class="nav__link" + ((index == 0) ? ' nav__link_active' : ''))
+          i(class="icon " + val.mod) !{val.code}
+          span.nav__title= val.text
